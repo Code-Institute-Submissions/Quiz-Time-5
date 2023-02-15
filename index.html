@@ -5,50 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="simple quick quiz game,using javascript.">
+    <link rel="stylesheet" href="assets/css/style.css">
 <title>Quiz Time</title>
 </head>
 <body>
 
-
+<!---login in section-->
 <div class="signin-form-header-div">
 
-<h1 class="login-header"></h1>    
+<h1 class="login-header">Quiz Time</h1>    
 
 <form action="/login/" method="post" id="login">
 <input type="text" placeholder="Choose your username" aria-label="sign in box" required>
-<input type="submit" value="Sign in...." id="submitform" required>
+<input type="submit" value="Sign in...." id="submitform" aria-label="submit button" required>
 </form>
 
 </div>
 
 
-
+<!--username display section--->
 
 <div class="hidden">
 
-    <h1 class="signd-in-logo"></h1>
+    <h1 class="signd-in-logo" aria-label="Quiz time logo">Quiz Time</h1>
 
-<h2 class="username-display">
+<h2 class="username-display" aria-label="Your choosen username display">
     Welcome<span id="username"></span>
 </h2>
 
 </div>
 
+<!--- Start the quiz -->
 
-<button id="start">Start Quiz</button>
+<button id="start" aria-label="button to start the quiz">Start Quiz</button>
+
+<!--- Game area of the quiz  -->
+
+<!--- Questions input from the question array.  -->
+
+<div id="question-box" class="hidden" aria-label="Question box"></div>
+
+<!-- answer input buttons. --->
+
+<div id="answerbuttons" class="hidden" aria-label="answer buttons"></div>
 
 
+<!--- Score tracker  -->
 
-
-
-
-
-
-
-
-
-
-
+<div id="scoreboard" class="hidden" aria-label="your scoreboard">
     
+    <h3>
+    <p>Correct Answers:<span id="correct"></span></p>
+    <p>Incorrect Answers:<span id="incorrect"></span></p>
+    </h3>
+
+</div>
+
+
+<!-- Background music  --->
+
+<div id="soundbox" class="hidden"></div>
+
+
+<!---   small footer with little contact link  -->
+
+
+<footer class="hidden">
+
+<ol>
+    <li>
+        <a href=""></a>
+    </li>
+</ol>
+
+
+
+
+</footer>
+
+
+
 </body>
 </html>

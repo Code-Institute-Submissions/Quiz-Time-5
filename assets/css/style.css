@@ -4,23 +4,39 @@ body {
     font-family: 'Mukta', sans-serif;
 }
 
+
+/* display of none. to hide elements in page */
+
 .hidden {
     display: none;
 }
 
 
+/* First screen - sign in.  */
 
 .login-header {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     color: #00473e;
     font-family: 'Roboto Slab', serif;
-    font-size:40px;
+    font-size: 55px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;   
 }
 
 
-/* #login - is the form it self. */
+input[type="submit"]{
+    margin:5px;
+    
+}
+
+
+
+
+
+/* #login - the form it self. */
 
 
 #login {
@@ -40,6 +56,60 @@ body {
     margin-left: 5%;
 }
 
+
+
+/* username display on the quiz page.  */
+
 .username-display {
 
+
+
 }
+
+
+#start {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10%;
+    margin-left: auto;    
+    margin-right: auto;
+    background-color:#ffe26a;
+    border:none;
+    color: #16123f;
+    font-size:20px;
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: fit-content;
+    cursor: pointer;
+}
+#start:hover {
+    background-color: #c7ddcc;
+}
+
+button {
+    display: inline-block;
+    background-color:#ffe26a;
+    border:none;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: 15px;
+    color: #16123f;
+    font-size:20px;
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: fit-content;
+ }
+
+ button:hover {
+  background-color: #c7ddcc;
+  box-shadow: 10px 10px 5px 0  #16123f;
+  
+ }
+
+
+
+
+
