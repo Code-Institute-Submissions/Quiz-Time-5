@@ -36,11 +36,11 @@ let incorrectAnswers = document.getElementById("incorrect");
 
 let score =  { correctAnswers: 0, incorrectAnswers: 0, };
 
+let showScore = document.getElementById("showscore");
 
 quizButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
-    console.log("startQuiz function called");
     quizButton.classList.add("hidden");
     questionBox.classList.remove("hidden");
     answerButtons.classList.remove("hidden");
@@ -49,34 +49,34 @@ function startQuiz() {
   }
 
 
-function displayQuestion(index) {
+
+  function displayQuestion(index) {
     questionBox.textContent = questions[index].question;
     answerButtons.innerHTML = "";
-    let button; 
-    questions[index].answerButtons.forEach(answers => {
-      button = document.createElement("button"); 
-  
-      button.classList.add("answerbuttons");
-      button.textContent = answers.text;
-      button.addEventListener('click', () => {
-        if (answers.correct) {
+    questions[index].answers.forEach(answer => {
+      let button = document.createElement("button");
+      button.classList.add("answer-buttons");
+      button.textContent = answer.text;
+      button.addEventListener("click", () => {
+        if (answer.correct) {
           score.correct++;
-          correctAnswers.textContent = score.correctAnswers;
+          correctAnswer.textContent = score.correct;
         } else {
-          score.incorrectAnswers++;
-          incorrectAnswers.textContent = score.incorrectAnswers;
+          score.incorrect++;
+          incorrect.textContent = score.incorrect;
         }
         if (index + 1 < questions.length) {
-          displayQuestion(index + 1);
+          displayQuestion(index + 1); // call displayQuestion with the next index
         } else {
+          
           questionBox.classList.add("hidden");
           answerButtons.classList.add("hidden");
-        }
+          
+         }
       });
-      answerButtons.appendChild(button); 
+      answerButtons.appendChild(button);
     });
-  }
-  
+  }  
 
 let questions = [
     {
