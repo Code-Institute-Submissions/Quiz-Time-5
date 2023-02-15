@@ -16,11 +16,11 @@ submitButton.addEventListener('click', function() {
     return;
   }
   let username = userNameInput.value;
-  welcomeText.classList.remove("hidden");
-  document.getElementById("username-displayed").textContent = username;
-  loginSection.classList.add("hidden");
-  quizStartAppear.classList.remove("hidden");
-  scoreAppear.classList.remove("hidden");
+      welcomeText.classList.remove("hidden");
+      document.getElementById("username-displayed").textContent = username;
+      loginSection.classList.add("hidden");
+      quizStartAppear.classList.remove("hidden");
+      scoreAppear.classList.remove("hidden");
   });
 
 
@@ -51,41 +51,78 @@ quizButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
     quizButton.classList.add("hidden");
-    scoreBoard.classList.remove("hidden");
-    answerButtons.classList.remove("hidden");
-    questionBox.classList.remove("hidden");
-    quizStartAppear.classList.add("hidden");
-    displayQuestion(0); 
-}
 
+    scoreBoard.classList.remove("hidden");
+
+    answerButtons.classList.remove("hidden");
+
+    questionBox.classList.remove("hidden");
+
+    quizStartAppear.classList.add("hidden");
+
+
+    displayQuestion(0); 
+
+
+
+
+}
 function displayQuestion(index) {
-  questionBox.textContent = questions[index].question;
-  answerButtons.innerHTML = "";
-  questions[index].answers.forEach(answer => {
-    let button = document.createElement("button");
-    button.classList.add("answer-buttons");
-    button.textContent = answer.text;
-    button.addEventListener("click", () => {
-      if (answer.correct) {
-        score.correct++;
-        correctAnswer.textContent = score.correct;
-      } else {
-        score.incorrect++;
-        incorrect.textContent = score.incorrect;
+    
+    questionBox.textContent = questions[index].question;
+
+    answerButtons.innerHTML = "";
+    
+    questions[index].answers.forEach(answer => {
+  
+   let button = document.createElement("button");
+  
+   button.classList.add("answer-buttons");
+  
+   button.textContent = answer.text;
+  
+   button.addEventListener("click", () => {
+  
+    handleAnswerClick(answer.correct);
+  
+    if (index + 1 < questions.length) {
+   displayQuestion(index + 1);
+   } else {
+   
+    questionBox.classList.add("hidden");
+
+    answerButtons.classList.add("hidden");
+
+    scoreBoard.classList.add("hidden");
+   
+    
+   let finalScore = document.getElementById("finalscore");
+   finalScore.classList.remove("hidden");
+   
+   
+   let finalCorrect = document.getElementById("finalcorrect");
+          finalCorrect.textContent = score.correct;
+
+
+   let finalIncorrect = document.getElementById("finalincorrect");
+       finalIncorrect.textContent = score.incorrect;
       }
-      if (index + 1 < questions.length) {
-        displayQuestion(index + 1); // call displayQuestion with the next index
-      } else {
-        
-        questionBox.classList.add("hidden");
-        answerButtons.classList.add("hidden");
-        }
     });
-    answerButtons.appendChild(button);
+      answerButtons.appendChild(button);
   });
 }
-
-
+  
+function handleAnswerClick(isCorrect) {
+   if (isCorrect) {
+     score.correct++;
+    } else {
+      score.incorrect++;
+    }
+    correctAnswer.textContent = score.correct;
+    incorrect.textContent = score.incorrect;
+  }
+ 
+  
 let questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',

@@ -145,5 +145,15 @@ button {
     color:#16123f; 
 }
 
+#finally {
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 30px;
+    color: #ffe26a;
+
+}
+
 
 
