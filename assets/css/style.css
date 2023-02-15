@@ -49,29 +49,40 @@ input[type="submit"]{
 }
 
 .signd-in-logo {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
     color: #00473e;
     font-family: 'Roboto Slab', serif;
-    display: inline-block;
-    font-size:40px;
-    margin-left: 5%;
+    font-size:55px;
+   
 }
 
-
+   
+    
 
 /* username display on the quiz page.  */
 
 .username-display {
-
-
-
+  color: #ffe26a;
+  margin-top: 2%;
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  font-size:40px;
+  
 }
-
+#username-displayed {
+    margin: 10px;
+}
 
 #start {
     display: flex;
     justify-content: center;
     justify-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: auto;    
     margin-right: auto;
     background-color:#ffe26a;
