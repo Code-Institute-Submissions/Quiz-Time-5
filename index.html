@@ -6,38 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="simple quick quiz game,using javascript.">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
 <title>Quiz Time</title>
 </head>
 <body>
 
 <!---login in section-->
-<div class="signin-form-header-div">
+<div id="sign-in">
+
 
 <h1 class="login-header">Quiz Time</h1>    
 
-<form action="/login/" method="post" id="login">
-<input type="text" placeholder="Choose your username" aria-label="sign in box" required>
+<section id="login">
+
+<input type="text" placeholder="Choose your username" aria-label="sign in box"  id="username" required>
 <input type="submit" value="Sign in...." id="submitform" aria-label="submit button" required>
-</form>
+
+</section>
 
 </div>
 
 
 <!--username display section--->
 
-<div class="hidden">
+<div class="hidden" id="username-displayed-section">
 
     <h1 class="signd-in-logo" aria-label="Quiz time logo">Quiz Time</h1>
 
 <h2 class="username-display" aria-label="Your choosen username display">
-    Welcome<span id="username"></span>
+    Welcome<span id="username-displayed"></span>
 </h2>
 
 </div>
 
 <!--- Start the quiz -->
 
-<button id="start" aria-label="button to start the quiz">Start Quiz</button>
+<button id="start" aria-label="button to start the quiz" class="hidden">Start Quiz</button>
 
 <!--- Game area of the quiz  -->
 
