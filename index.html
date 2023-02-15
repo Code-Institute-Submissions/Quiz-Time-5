@@ -41,12 +41,14 @@
 </div>
 
 <!--- Start the quiz -->
-<div class="hidden" id="quiz-start-appear">
+<div class="hidden" id="quiz-start-appear" id="start">
 
 <button id="start" aria-label="button to start the quiz">Start Quiz</button>
 
 </div>
 <!--- Game area of the quiz  -->
+
+
 
 <!--- Questions input from the question array.  -->
 
@@ -54,23 +56,25 @@
 
 <!-- answer input buttons. --->
 
-<div id="answerbuttons" class="hidden" aria-label="answer buttons">
-
-</div>
+<div id="answerbuttons" class="hidden" aria-label="answer buttons"></div>
 
 
 <!--- Score tracker  -->
 
-<div id="scoreboard" class="hidden" aria-label="your scoreboard">
+
+<section id="score" class="hidden">
+
+
+<div id="scoreboard" aria-label="scoreboard">
     
-    <h3 class="hidden" id="showscore">
+    <h3>
     <p>Correct Answers:<span id="correct"></span></p>
     <p>Incorrect Answers:<span id="incorrect"></span></p>
     </h3>
 
 </div>
 
-
+</section>
 <!-- Background music  --->
 
 <div id="soundbox" class="hidden"></div>
