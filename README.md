@@ -1,3 +1,12 @@
+<style>
+
+body {
+background-color:#abd699;
+}
+</style>
+
+
+
 <h1> Simple little Quiz Game</h1>
 <hr>
 
