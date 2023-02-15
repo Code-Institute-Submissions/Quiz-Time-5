@@ -23,19 +23,6 @@ submitButton.addEventListener('click', function() {
 
 let quizButton = document.getElementById("start");
 
-quizButton.addEventListener('click', startQuiz);
-
-function startQuiz() {
-    console.log("startQuiz function called");
-    quizButton.classList.add("hidden");
-    questionBox.classList.remove("hidden");
-    answerButtons.classList.remove("hidden");
-    scoreBoard.classList.remove("hidden");
-    displayQuestion(0);
-  }
-
-
-
 let questionBox = document.getElementById("questionbox");
 
 let answerButtons = document.getElementById("answerbuttons");
@@ -60,6 +47,8 @@ function startQuiz() {
     scoreBoard.classList.remove("hidden");
     displayQuestion(0);
   }
+
+
 function displayQuestion(index) {
     questionBox.textContent = questions[index].question;
     answerButtons.innerHTML = "";
