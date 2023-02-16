@@ -155,15 +155,12 @@ button {
 
 #finally {
     
-    display: inline-block;
-    margin: 0 0 20% 10%
+    display: flex;
     justify-content: center;
-    justify-items: center;
-    
+    align-items: center;
+    height: 100vh;
     font-size: 45px;
     color: #ffe26a;
     text-align: center;
     
-    /*background-image: none;    get the question mark image in and mask it.    */
-
 }

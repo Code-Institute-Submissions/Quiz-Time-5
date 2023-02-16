@@ -50,6 +50,7 @@ submitButton.addEventListener('click', function() {
   let finalIncorrect = document.getElementById("finalincorrect");
 
   let quizInProgress = false;
+  let finAlly = document.getElementById("finally");
   
 
 
@@ -113,13 +114,24 @@ function handleAnswerClick(isCorrect) {
   
 function displayFinalScore() {
  quizInProgress = false;
+ quizButton.classList.add("hidden");
+ scoreBoard.classList.add("hidden");
+ answerButtons.classList.add("hidden");
+ questionBox.classList.add("hidden");
+ quizStartAppear.classList.add("hidden");
+
+
+ finAlly.classList.remove("hidden");
+ 
  finalScore.classList.remove("hidden");
  finalCorrect.textContent = score.correct;
  finalIncorrect.textContent = score.incorrect;
   
- answerButtons.classList.add("hidden");
- scoreBoard.classList.add("hidden");
- scoreAppear.classList.add("hidden");
+ 
+
+
+
+
 }
  
   
