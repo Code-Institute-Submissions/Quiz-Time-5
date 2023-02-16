@@ -120,33 +120,37 @@ function handleAnswerClick(isCorrect) {
     <style>
     
     body {
-      background-color:#fba92c;
-      
+    background-color:#fba92c;
+    background-image: url('assets/images/pexels-ann-h-6266316.jpg');
+    background-size: center center;
+    background-attachment: fixed;
+    background-position: center;
+    display:flex;
+    justify-content:center;
+           
     }
     
     #finally {
         
-      background-image: url('assets/images/pexels-ann-h-6266316.jpg');
-      background-size: cover cover;
-      background-attachment: fixed;
-      background-attachment: scroll;
       
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-size: 40px;
-      color: #16123f;
-      text-align: center;
+    margin-top:2%;
+    display: flex 1;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 40px;
+    color: #16123f;
+    text-align: center;
+    text-shadow: white 2px 2px;
     
    }
     </style>  
     <div id="finally">
      
-        <div id="finalscore" aria-label="Finalscore">
-          <h1>Quiz Completed :)</h1>
-          <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
-          <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
+    <div id="finalscore" aria-label="Finalscore">
+     <h1>Quiz Completed :)</h1>
+       <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
+       <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
         </div>
       </div>
     `;
