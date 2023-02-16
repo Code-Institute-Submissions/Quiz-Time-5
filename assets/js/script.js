@@ -10,6 +10,8 @@ let quizStartAppear = document.getElementById("quiz-start-appear");
 
 let scoreAppear = document.getElementById("score");
 
+let musicAppear = document.getElementById("soundbox");
+
 submitButton.addEventListener('click', function() {
       if (!userNameInput.value) {
     alert("Please choose a username");
@@ -21,106 +23,104 @@ submitButton.addEventListener('click', function() {
       loginSection.classList.add("hidden");
       quizStartAppear.classList.remove("hidden");
       scoreAppear.classList.remove("hidden");
+      musicAppear.classList.remove("hidden");
   });
 
 
   
 
-let quizButton = document.getElementById("start"); 
+  let quizButton = document.getElementById("start"); 
+  
+  let questionBox = document.getElementById("questionbox"); 
+  
+  let answerButtons = document.getElementById("answerbuttons"); 
+  
+  let scoreBoard = document.getElementById("scoreboard"); 
+  
+  let correctAnswer = document.getElementById("correct");
+  
+  let incorrect = document.getElementById("incorrect");
+  
+  let score = { correct: 0,  incorrect: 0 };
+  
+  let finalScore = document.getElementById("finalscore");
+  
+  let finalCorrect = document.getElementById("finalcorrect");
+  
+  let finalIncorrect = document.getElementById("finalincorrect");
 
-let questionBox = document.getElementById("questionbox"); 
-
-let answerButtons = document.getElementById("answerbuttons"); 
-
-
-let scoreBoard = document.getElementById("scoreboard"); 
-
-let correctAnswer = document.getElementById("correct");
-
-let incorrect = document.getElementById("incorrect");
-
-
-
-let score = { correct: 0,  incorrect: 0 };
-
-
-
-
-
-quizButton.addEventListener('click', startQuiz);
-
-function startQuiz() {
-    quizButton.classList.add("hidden");
-
-    scoreBoard.classList.remove("hidden");
-
-    answerButtons.classList.remove("hidden");
-
-    questionBox.classList.remove("hidden");
-
-    quizStartAppear.classList.add("hidden");
-
-
-    displayQuestion(0); 
+  let quizInProgress = false;
+  
 
 
 
+  quizButton.addEventListener('click', startQuiz);
+  
 
-}
-function displayQuestion(index) {
+
+  function startQuiz() {
+  quizInProgress = true;
+  quizButton.classList.add("hidden");
+  scoreBoard.classList.remove("hidden");
+  answerButtons.classList.remove("hidden");
+  questionBox.classList.remove("hidden");
+  quizStartAppear.classList.add("hidden");
+  displayQuestion(0);
+
+      score = { correct: 0,  incorrect: 0 };
+  }
+  
+  function displayQuestion(index) {
+    if (!quizInProgress) {
+        return;
+    }  
+  questionBox.textContent = questions[index].question;
+  
+  answerButtons.innerHTML = "";
+
+  questions[index].answers.forEach(answer => {
+          
+  let button = document.createElement("button");
+
+  button.classList.add("answer-buttons");
+
+  button.textContent = answer.text;
+
+  button.addEventListener("click", () => {
+
+  handleAnswerClick(answer.correct);
+
     
-    questionBox.textContent = questions[index].question;
-
-    answerButtons.innerHTML = "";
-    
-    questions[index].answers.forEach(answer => {
-  
-   let button = document.createElement("button");
-  
-   button.classList.add("answer-buttons");
-  
-   button.textContent = answer.text;
-  
-   button.addEventListener("click", () => {
-  
-    handleAnswerClick(answer.correct);
-  
-    if (index + 1 < questions.length) {
-   displayQuestion(index + 1);
-   } else {
-   
-    questionBox.classList.add("hidden");
-
-    answerButtons.classList.add("hidden");
-
-    scoreBoard.classList.add("hidden");
-   
-    
-   let finalScore = document.getElementById("finalscore");
-   finalScore.classList.remove("hidden");
-   
-   
-   let finalCorrect = document.getElementById("finalcorrect");
-          finalCorrect.textContent = score.correct;
-
-
-   let finalIncorrect = document.getElementById("finalincorrect");
-       finalIncorrect.textContent = score.incorrect;
-      }
-    });
-      answerButtons.appendChild(button);
-  });
+   if (index + 1 < questions.length) {
+     displayQuestion(index + 1);
+  } else {
+   displayFinalScore();
+   }
+});
+  answerButtons.appendChild(button);
+});
 }
   
 function handleAnswerClick(isCorrect) {
-   if (isCorrect) {
-     score.correct++;
-    } else {
-      score.incorrect++;
-    }
-    correctAnswer.textContent = score.correct;
-    incorrect.textContent = score.incorrect;
+     if (isCorrect) {
+       score.correct++;
+     } else {
+       score.incorrect++;
+     }
+     correctAnswer.textContent = score.correct;
+     incorrect.textContent = score.incorrect;
   }
+  
+function displayFinalScore() {
+ quizInProgress = false;
+ finalScore.classList.remove("hidden");
+ finalCorrect.textContent = score.correct;
+ finalIncorrect.textContent = score.incorrect;
+  
+ answerButtons.classList.add("hidden");
+ scoreBoard.classList.add("hidden");
+ scoreAppear.classList.add("hidden");
+}
  
   
 let questions = [

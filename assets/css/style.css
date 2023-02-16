@@ -78,6 +78,7 @@ input[type="submit"]{
     margin: 10px;
 }
 
+
 #start {
     display: flex;
     justify-content: center;
@@ -104,37 +105,43 @@ button {
     background-color:#ffe26a;
     border:none;
     cursor: pointer;
-    margin-right: 25px;
+    margin-right: 1%;
+    
     margin-top: 15px;
     color: #16123f;
     font-size:20px;
     border-radius: 25px;
-    padding: 20px;
+    padding: 15px;
     width: 150px;
     height: fit-content;
  }
 
  button:hover {
   background-color: #c7ddcc;
-  box-shadow: 10px 10px 5px 0  #16123f;
+  box-shadow: 5px 5px 5px 0  #16123f;
   color:white;
   
  }
 
 #questionbox {
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     justify-items: center;
     background-color: #abd699;
     color: #16123f;
     font-size: 30px;
+    text-align: center;
        
 }
 
 #answerbuttons {
-    display: flex;
+    margin-top: 2%;
+    display: flexbox;
     justify-content: center;
     justify-items: center;
+    text-align: center;
+    font-size: 20px;
 }
 
 #scoreboard {
@@ -143,17 +150,20 @@ button {
     justify-items: center;
     font-size: 20px; 
     color:#16123f; 
+    text-align: center;
 }
 
 #finally {
     
-    display: flex;
+    display: inline-block;
+    margin: 0 0 20% 10%
     justify-content: center;
     justify-items: center;
-    font-size: 30px;
+    
+    font-size: 45px;
     color: #ffe26a;
+    text-align: center;
+    
+    /*background-image: none;    get the question mark image in and mask it.    */
 
 }
-
-
-
