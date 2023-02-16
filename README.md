@@ -1,13 +1,4 @@
-<style>
-
-body {
-background-color:#abd699;
-}
-</style>
-
-
-
-<h1> Simple little Quiz Game</h1>
+<h1> Simple little Quiz Game with ten questions.</h1>
 <hr>
 
 <h3>Languages used inside of the project is:</h3>
