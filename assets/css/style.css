@@ -2,17 +2,16 @@
 body {
     background-color: #abd699;
     font-family: 'Mukta', sans-serif;
+      
 }
 
-
-/* display of none. to hide elements in page */
 
 .hidden {
     display: none;
 }
 
 
-/* First screen - sign in.  */
+
 
 .login-header {
     display: flex;
@@ -35,10 +34,6 @@ input[type="submit"]{
 
 
 
-
-/* #login - the form it self. */
-
-
 #login {
     display: flex;
     justify-content: center;
@@ -59,10 +54,9 @@ input[type="submit"]{
    
 }
 
-   
-    
 
-/* username display on the quiz page.  */
+
+
 
 .username-display {
   color: #ffe26a;
@@ -162,5 +156,9 @@ button {
     font-size: 45px;
     color: #ffe26a;
     text-align: center;
-    
-}
+ }
+ @media (max-width: 768px) {
+    #finally {
+      flex-direction: column;
+    }
+  }

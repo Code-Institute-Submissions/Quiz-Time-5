@@ -50,6 +50,7 @@ submitButton.addEventListener('click', function() {
   let finalIncorrect = document.getElementById("finalincorrect");
 
   let quizInProgress = false;
+
   let finAlly = document.getElementById("finally");
   
 
@@ -95,7 +96,7 @@ submitButton.addEventListener('click', function() {
    if (index + 1 < questions.length) {
      displayQuestion(index + 1);
   } else {
-   displayFinalScore();
+   displayFinalScore();   
    }
 });
   answerButtons.appendChild(button);
@@ -112,28 +113,21 @@ function handleAnswerClick(isCorrect) {
      incorrect.textContent = score.incorrect;
   }
   
-function displayFinalScore() {
- quizInProgress = false;
- quizButton.classList.add("hidden");
- scoreBoard.classList.add("hidden");
- answerButtons.classList.add("hidden");
- questionBox.classList.add("hidden");
- quizStartAppear.classList.add("hidden");
 
-
- finAlly.classList.remove("hidden");
- 
- finalScore.classList.remove("hidden");
- finalCorrect.textContent = score.correct;
- finalIncorrect.textContent = score.incorrect;
-  
- 
-
-
-
-
-}
- 
+  function displayFinalScore() {
+   
+    let finishingPage = `
+      <div id="finally">
+        <div id="finalscore" aria-label="Finalscore">
+          <h1>Quiz Completed :)</h1>
+          <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
+          <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
+        </div>
+      </div>
+    `;
+   
+    document.body.innerHTML = finishingPage;
+  }
   
 let questions = [
   {
