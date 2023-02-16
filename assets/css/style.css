@@ -147,18 +147,3 @@ button {
     text-align: center;
 }
 
-#finally {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 45px;
-    color: #ffe26a;
-    text-align: center;
- }
- @media (max-width: 768px) {
-    #finally {
-      flex-direction: column;
-    }
-  }

@@ -117,7 +117,32 @@ function handleAnswerClick(isCorrect) {
   function displayFinalScore() {
    
     let finishingPage = `
-      <div id="finally">
+    <style>
+    
+    body {
+      background-color:#fba92c;
+      
+    }
+    
+    #finally {
+        
+      background-image: url('assets/images/pexels-ann-h-6266316.jpg');
+      background-size: cover cover;
+      background-attachment: fixed;
+      background-attachment: scroll;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 40px;
+      color: #16123f;
+      text-align: center;
+    
+   }
+    </style>  
+    <div id="finally">
+     
         <div id="finalscore" aria-label="Finalscore">
           <h1>Quiz Completed :)</h1>
           <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
