@@ -118,41 +118,79 @@ function handleAnswerClick(isCorrect) {
    
     let finishingPage = `
     <style>
-    
     body {
+
     background-color:#fba92c;
+    
     background-image: url('assets/images/pexels-ann-h-6266316.jpg');
+    
     background-size: center center;
+    
     background-attachment: fixed;
-    background-position: center;
-    display:flex;
-    justify-content:center;
-           
-    }
+    background-position: rigth;
     
-    #finally {
-        
-      
-    margin-top:2%;
-    display: flex 1;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 80vh;
-    font-size: 40px;
-    color: #16123f;
+  }
+            
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+  }
+            
+  .finally {
+    margin-rigth: 5px;
+    flex: 1;
     text-align: center;
-    text-shadow: white 2px 2px;
-    
-   }
-    </style>  
-    <div id="finally">
-     
+    color: #16123f;
+    background-color: rgba(255, 255, 255,0.2);
+  }
+            
+  .feedback {
+    flex: 1;
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.2);
+    font-size: 20px;
+  }
+ 
+  textarea {
+  width: 55%;
+  height: 200px;
+  padding: 2px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #abd699;
+  resize: vertical;
+}
+  
+  @media screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="wrapper">
+  <div class="finally">
     <div id="finalscore" aria-label="Finalscore">
-     <h1>Quiz Completed :)</h1>
-       <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
-       <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
-        </div>
-      </div>
+      <h1>Quiz Completed :)</h1>
+      <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
+      <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
+    </div>
+  </div>
+  <div class="feedback">
+  <p>Please be sure to send some feedback</p>
+  <p>on this little quiz project</p>
+  <form method="post" action="/feedback">
+    <textarea name="feedback"></textarea><br>
+    <input type="submit" name="submit">
+  </form>
+</div>
     `;
    
     document.body.innerHTML = finishingPage;
