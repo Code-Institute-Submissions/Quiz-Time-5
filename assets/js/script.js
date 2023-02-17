@@ -21,7 +21,7 @@ submitButton.addEventListener('click', function() {
       document.getElementById("username-displayed").textContent = username;
       loginSection.classList.add("hidden");
       quizStartAppear.classList.remove("hidden");
-      scoreAppear.classList.remove("hidden");
+      //scoreAppear.classList.remove("hidden");
 
   });
 
@@ -60,6 +60,7 @@ submitButton.addEventListener('click', function() {
 
 
   function startQuiz() {
+  scoreAppear.classList.remove("hidden");
   quizInProgress = true;
   quizButton.classList.add("hidden");
   scoreBoard.classList.remove("hidden");

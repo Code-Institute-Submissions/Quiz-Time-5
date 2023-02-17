@@ -2,7 +2,7 @@
 body {
     background-color: #abd699;
     font-family: 'Mukta', sans-serif;
-    
+
 }
 
 
@@ -19,7 +19,7 @@ body {
     justify-items: center;
     color: #00473e;
     font-family: 'Roboto Slab', serif;
-    font-size: 55px;
+    font-size: 5vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;   
@@ -27,8 +27,7 @@ body {
 
 
 input[type="submit"]{
-    margin:5px;
-    
+    margin:5px;    
 }
 
 
@@ -50,7 +49,7 @@ input[type="submit"]{
     text-align: center;
     color: #00473e;
     font-family: 'Roboto Slab', serif;
-    font-size:55px;
+    font-size:5vw;
    
 }
 
@@ -69,7 +68,7 @@ input[type="submit"]{
   
 }
 #username-displayed {
-    margin: 10px;
+    margin: 5px;
 }
 
 
@@ -118,7 +117,7 @@ button {
  }
 
 #questionbox {
-    margin-top: 5%;
+    margin-top: 3%;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -130,7 +129,7 @@ button {
 }
 
 #answerbuttons {
-    margin-top: 2%;
+    margin-top: 1%;
     display: flexbox;
     justify-content: center;
     justify-items: center;
