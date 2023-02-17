@@ -56,7 +56,6 @@ input[type="submit"]{
 
 
 
-
 .username-display {
   color: #ffe26a;
   margin-top: 2%;
@@ -130,7 +129,7 @@ button {
 
 #answerbuttons {
     margin-top: 1%;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     justify-items: center;
     text-align: center;
