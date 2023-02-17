@@ -10,7 +10,6 @@ let quizStartAppear = document.getElementById("quiz-start-appear");
 
 let scoreAppear = document.getElementById("score");
 
-let musicAppear = document.getElementById("soundbox");
 
 submitButton.addEventListener('click', function() {
       if (!userNameInput.value) {
@@ -23,7 +22,7 @@ submitButton.addEventListener('click', function() {
       loginSection.classList.add("hidden");
       quizStartAppear.classList.remove("hidden");
       scoreAppear.classList.remove("hidden");
-      musicAppear.classList.remove("hidden");
+
   });
 
 
@@ -118,59 +117,85 @@ function handleAnswerClick(isCorrect) {
    
     let finishingPage = `
     <style>
-    body {
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Roboto+Slab&display=swap');
 
-    background-color:#fba92c;
+body {
+ font-family: 'Mukta', sans-serif;
+ font-size:35px;
+
+ background-color:#fba92c;
     
-    background-image: url('assets/images/pexels-ann-h-6266316.jpg');
+ background-image: url('assets/images/pexels-ann-h-6266316.jpg');
     
-    background-size: center center;
+background-size: center center;
     
-    background-attachment: fixed;
-    background-position: rigth;
+background-attachment: fixed;
+background-position: rigth;
     
-    display: flex;
-    justify-content: center;
-  }
+display: flex;
+justify-content: center;
+}
             
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-  }
+.wrapper {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    
+  align-items: stretch;
+    
+  width: 100%;
+  max-width: 1200px;
+}
             
-  .finally {
-    margin-rigth: 5px;
-    flex: 1;
-    text-align: center;
-    color: #16123f;
-    background-color: rgba(255, 255, 255,0.2);
-  }
-            
-  .feedback {
-    flex: 1;
-    text-align: center;
-    background-color: rgba(255, 255, 255,0.2);
-    font-size: 20px;
-  }
- 
-  textarea {
-  width: 55%;
-  height: 200px;
-  padding: 2px;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #abd699;
-  resize: vertical;
+.finally {
+  margin-top:5%;
+  margin-rigth: 5px;
+  flex: 1;
+    
+ text-align: center;
+ color: #16123f;
+ background-color: rgba(255, 255, 255,0.2);
+}
+
+
+.feedback {
+  margin-top:5%;
+  
+  flex: 1;
+  text-align: center;
+    
+  background-color: rgba(255, 255, 255,0.2);
+    
+}
+
+textarea {
+width: 55%;
+height: 200px;
+padding: 2px;
+font-size: 20px;
+color:white;
+border: 1px solid black;
+border-radius: 5px;
+background-color: #b999be;
+resize: vertical;
+}
+
+input[type="submit"]{
+  border:none;
+  border-radius:50%;
+  padding:35px;
+  color:black;
+  background-color:rgba(255, 110, 39,0.7);
+  
+}
+input[type="submit"]:hover {
+  color:white;
 }
   
   @media screen and (max-width: 767px) {
     .container {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 </style>
@@ -178,7 +203,7 @@ function handleAnswerClick(isCorrect) {
 <div class="wrapper">
   <div class="finally">
     <div id="finalscore" aria-label="Finalscore">
-      <h1>Quiz Completed :)</h1>
+      <h1>Quiz Completed</h1>
       <p>Correct answers: <span id="finalcorrect">${score.correct}</span></p>
       <p>Incorrect answers: <span id="finalincorrect">${score.incorrect}</span></p>
     </div>
