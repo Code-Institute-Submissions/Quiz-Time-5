@@ -27,9 +27,19 @@ body {
 
 
 input[type="submit"]{
-    margin:5px;    
+    margin:5px;   
+    border:none;
+    width: fit-content; 
+    height: 6%;
+    background-color: #ffe26a;
+    color:black;
+    font-size: 1em;
+    font-weight: 200;
 }
-
+input[type="submit"]:hover {
+    
+    border:white 1px solid;
+}
 
 
 
@@ -63,11 +73,11 @@ input[type="submit"]{
   justify-content: center;
   justify-items: center;
   text-align: center;
-  font-size:40px;
+  font-size:3vw;
   
 }
 #username-displayed {
-    margin: 5px;
+    margin:2%;
 }
 
 
@@ -75,7 +85,7 @@ input[type="submit"]{
     display: flex;
     justify-content: center;
     justify-items: center;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: auto;    
     margin-right: auto;
     background-color:#ffe26a;
@@ -98,8 +108,8 @@ button {
     border:none;
     cursor: pointer;
     margin-right: 1%;
-    
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 2%;
     color: #16123f;
     font-size:20px;
     border-radius: 25px;
@@ -116,7 +126,7 @@ button {
  }
 
 #questionbox {
-    margin-top: 3%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     justify-items: center;

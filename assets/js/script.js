@@ -21,7 +21,7 @@ submitButton.addEventListener('click', function() {
       document.getElementById("username-displayed").textContent = username;
       loginSection.classList.add("hidden");
       quizStartAppear.classList.remove("hidden");
-      //scoreAppear.classList.remove("hidden");
+      
 
   });
 
@@ -127,14 +127,17 @@ body {
  background-color:#fba92c;
     
  background-image: url('assets/images/pexels-ann-h-6266316.jpg');
+
+ opacity:60;
     
-background-size: center center;
+ background-size: center center;
     
-background-attachment: fixed;
-background-position: rigth;
+ background-attachment: fixed;
+ background-position: rigth;
     
-display: flex;
-justify-content: center;
+ display: flex;
+ justify-content: center;
+
 }
             
 .wrapper {
@@ -170,16 +173,16 @@ justify-content: center;
     
 }
 
-textarea {
-width: 55%;
-height: 200px;
-padding: 2px;
-font-size: 20px;
-color:white;
-border: 1px solid black;
-border-radius: 5px;
-background-color: #b999be;
-resize: vertical;
+  textarea {
+  width: 55%;
+  height: 200px;
+  padding: 2px;
+  font-size: 20px;
+  color:white;
+  border: 1px solid black;
+  border-radius: 5px; 
+  background-color: #b999be;
+  resize: vertical;
 }
 
 input[type="submit"]{
