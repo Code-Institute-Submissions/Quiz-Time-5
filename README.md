@@ -53,7 +53,7 @@ At the end of the quiz, you'll be shown your final score and given the option to
 
 <hr>
 
-![ScreenShot](.png)
+![ScreenShot](/assets/images)
 ![ScreenShot](.png)
 ![ScreenShot](6_205511.png)
 
