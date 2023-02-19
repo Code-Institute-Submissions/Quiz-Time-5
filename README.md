@@ -51,6 +51,7 @@ You can add as many questions as you like,to the questions array.
   },</h3>
 
 <h2>And once your thru the simple Quiz game your greeted with result page like this below, hopefully better scores then i got!</h2>
+<br>
 ![ScreenShot](assets/images/Screenshot_20230218_205755-min.png)
 <br>
 
@@ -82,5 +83,5 @@ You can add as many questions as you like,to the questions array.
 
 
 
-![ScreenShot](assets/images/Screenshot_20230218_205755-min.png)
+
 
