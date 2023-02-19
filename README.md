@@ -10,19 +10,19 @@ Select the answer that you think is correct, and click that answer button to mov
 At the end of the quiz, you'll be shown your final score and given the option to restart the quiz.</h3>
 
 <h2> the sign in screen seen below..</h2>
-<img src="assets/images/Screenshot_20230218_205706.jpg" height="60" width="60" >
+<img src="assets/images/Screenshot_20230218_205706.jpg" height="160" width="260" >
 
 <br>
 
 <h2>After the sign your greeted with this start screen.</h2>
-![ScreenShot](/assets/images/Screenshot_20230218_205727.png)
+<img src="assets/images/Screenshot_20230218_205727.jpg" height="160" width="260" >
 
 <br>
 
 
 
 <p>And Once you started the simple quiz this is inside the the question area.</p>
-![ScreenShot](assets/images/Screenshot_20230218_205738.png)
+<img src="assets/images/Screenshot_20230218_205738.jpg" height="160" width="260" >
 <br>
 
 <h2>Customization</h2>
@@ -52,9 +52,9 @@ You can add as many questions as you like,to the questions array.
 
 
 
-<h2>And once your thru the simple Quiz game your greeted with result page like this below, hopefully better scores then i got!</h2>
+<h2>And once you completed the Quiz game, your greeted with result page like this below, hopefully better scores then i got!</h2>
 <br>
-![ScreenShot](assets/images/Screenshot_20230218_205755.png)
+<img src="assets/images/Screenshot_20230218_205755.jpg" height="160" width="260" >
 <br>
 
 <h2>Credits</h2>
