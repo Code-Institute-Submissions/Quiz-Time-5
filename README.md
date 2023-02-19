@@ -16,6 +16,7 @@ At the end of the quiz, you'll be shown your final score and given the option to
 
 <h2>After the sign your greeted with this start screen.</h2>
 ![ScreenShot](/assets/images/Screenshot_20230218_205727-min.png)
+
 <br>
 
 
