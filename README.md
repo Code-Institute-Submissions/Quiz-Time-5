@@ -18,7 +18,7 @@ You can add as many questions as you like,to the questions array.
 
 
 {
-    question: ' insert question here.... ',
+    question: ' insert question here.... ',<br>
     answers: [
           
       { text: 'answer here', correct: true },
