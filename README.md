@@ -4,7 +4,7 @@
 
 <h2>Usage</h2>
 <h3>
-To start the quiz, simply choose a username and then  click the "Start Quiz" button.
+To start the quiz, simply choose a username, and then  click the "Start Quiz" button.
  You'll be presented with a series of questions, each with three different options answers.
 Select the answer that you think is correct, and click that answer button to move on to the next question. 
 At the end of the quiz, you'll be shown your final score and given the option to restart the quiz.</h3>
@@ -31,8 +31,9 @@ At the end of the quiz, you'll be shown your final score and given the option to
 <p>answers: an array of possible answers, each stored as an object with the following properties:</p>
 
   
-<p>ext: the text of the answer
-correct: a boolean value indicating whether the answer is correct or not { text : correct
+<p> { Text: the text of the answer
+correct: a boolean value indicating whether the answer is correct or not 
+{ text : correct }
 You can add as many questions as you like,to the questions array.
 
 
