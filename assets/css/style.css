@@ -29,18 +29,25 @@ body {
 input[type="submit"]{
     margin:5px;   
     border:none;
-    width: fit-content; 
-    height: 6%;
+    width: 8em; 
+    height: 8%;
     background-color: #ffe26a;
     color:black;
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 400;
 }
 input[type="submit"]:hover {
-    
-    border:white 1px solid;
+ color:white;   
 }
 
+#username {
+    width: 12em;
+    height: 8%;
+    border: 1px solid #ffe26a;
+    color: #16123f;
+    text-align: center;
+    background-color: whitesmoke;
+}
 
 
 #login {
