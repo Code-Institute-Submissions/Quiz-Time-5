@@ -8,11 +8,11 @@
 <p>If you want to customize the quiz, you can modify the script.js file to add, remove, or modify questions.</p>
 
 <h3>
-question: the text of the question
-answers: an array of possible answers, each stored as an object with the following properties:
+<p>question: the text of the question</p>
+<p>answers: an array of possible answers, each stored as an object with the following properties:</p>
 
   
-text: the text of the answer
+<p>ext: the text of the answer
 correct: a boolean value indicating whether the answer is correct or not { text : correct
 You can add as many questions as you like,to the questions array.
 
