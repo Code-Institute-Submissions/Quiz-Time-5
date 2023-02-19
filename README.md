@@ -11,11 +11,11 @@ At the end of the quiz, you'll be shown your final score and given the option to
 
 <h2> the sign in screen seen below..</h2>
 
-![ScreenShot](/assets/images/Screenshot_20230218_205706-min.png)
+![ScreenShot](/assets/images/Screenshot_20230218_205706-min.jpg)
 <br>
 
 <h2>After the sign your greeted with this start screen.</h2>
-![ScreenShot](/assets/images/Screenshot_20230218_205727-min.png)
+![ScreenShot](/assets/images/Screenshot_20230218_205727-min.jpg)
 
 <br>
 
@@ -50,12 +50,12 @@ You can add as many questions as you like,to the questions array.
     ]
   },</h3>
 
+
+
 <h2>And once your thru the simple Quiz game your greeted with result page like this below, hopefully better scores then i got!</h2>
 <br>
 ![ScreenShot](assets/images/Screenshot_20230218_205755-min.png)
 <br>
-
-
 
 <h2>Credits</h2>
 
