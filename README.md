@@ -38,7 +38,10 @@ At the end of the quiz, you'll be shown your final score and given the option to
 <h2>Credits</h2>
 
 <ol>
-  <li>https://ahaslides.com/blog/funny-pub-quiz-questions/</li><p> the site where i sourced the questions in this quiz. </p>
+  <li>https://ahaslides.com/blog/funny-pub-quiz-questions/</li>
+  <p> the site where i sourced the questions in this quiz. </p>
+  <li>https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLXy0WVQprv4tFVbRmQasmLho4xIY73yvo&index=33</li>
+  <p>inspired me alot this video for the quiz game.</p>
 </ol>
 
 
